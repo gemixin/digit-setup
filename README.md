@@ -8,11 +8,11 @@ https://github.com/facebookresearch/digit-interface
 You can install the digit-interface library via pip:  
 `pip install digit-interface`
 
-If you want to create a new Anaconda environment, you can use the environment.yml file in this repo:  
+If you want to create a new Anaconda environment, you can use the **environment.yml** file in this repo:  
 `conda env create -f environment.yml`
 
 ### Running the Script
-Connect your DIGIT sensor via USB and simply run the single_digit.py script.  
+Connect your DIGIT sensor via USB and simply run the **single_digit.py** script.  
 Follow the instructions/output within the console.
 
 ### DIGIT Reference
