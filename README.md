@@ -1,6 +1,6 @@
 # DIGIT-Setup
 
-## Basic setup for a single DIGIT tactile sensor
+## Basic setup for a single DIGIT tactile sensor in Python
 A simple script to setup and test a single [DIGIT](https://digit.ml/) tactile sensor using:  
 https://github.com/facebookresearch/digit-interface
 
