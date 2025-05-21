@@ -1,0 +1,7 @@
+name: digit
+dependencies:
+    - python=3.12 # Tested with 3.12 but other versions should work
+    - opencv # OpenCV useful for additional video processing
+    - pip # Install pip 
+    - pip: # Include pip dependencies last
+        - digit-interface # Official DIGIT Python interface
