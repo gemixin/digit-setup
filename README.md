@@ -13,7 +13,8 @@ If you want to create a new Anaconda environment, you can use the **environment.
 
 ### Running the Script
 Connect your DIGIT sensor via USB and simply run the **single_digit.py** script.  
-Follow the instructions/output within the console.
+Follow the instructions/output within the console.  
+The script will connect to the DIGIT, configure some settings, print some basic info and show a live view of the tactile stream. It will then save some frames as images locally.
 
 ### DIGIT Reference
 Mike Lambeta, Po-Wei Chou, Stephen Tian, Brian Yang, Benjamin Maloon, Victoria Rose Most, Dave Stroud, Raymond Santos, Ahmad Byagowi, Gregg Kammerer, Dinesh Jayaraman, Roberto Calandra.  
