@@ -12,7 +12,9 @@ from digit_interface.digit_handler import DigitHandler
 
 # Pause the program and wait for a key press
 def pause():
+    print("--------")
     input("Press a key to continue...")
+    print("--------")
 
 
 # Get a list of connected DIGIT sensors
@@ -34,32 +36,37 @@ if len(digits) > 0:
     digit.connect()
 
     # Print basic info
+    print("Digit info:")
     print(digit.info())
-
     pause()
 
     # Print possible streams
     print("Possible streams:")
     print(Digit.STREAMS)
+    pause()
+
+    # Set stream resolution and fps
+    digit.set_resolution({"resolution": {'width': 320, 'height': 240}})  # QVGA resolution
+    digit.set_fps(Digit.STREAMS['QVGA']['fps']['30fps'])  # 30 fps
+    print("Set stream to QVGA 30fps.")
+    pause()
+
+    # Print basic info again
+    print("Digit info:")
+    print(digit.info())
+    pause()
 
     # Print min and max intensity
     print(f"Min intensity: {Digit.LIGHTING_MIN}")
     print(f"Max intensity: {Digit.LIGHTING_MAX}")
-
     pause()
 
-    # Set stream resolution and fps
-    fps_30 = Digit.STREAMS['QVGA']['fps']['30fps']
-    digit.set_fps(fps_30)
-
     # Set lighting intensity
-    digit.set_intensity(12)
-
-    print("Set stream resolution, fps and light intensity.")
-
-    # Print basic info again
-    print(digit.info())
-
+    digit.set_intensity(0)
+    print("Set lighting intensity to 0.")
+    pause()
+    digit.set_intensity(15)
+    print("Set lighting intensity to 15.")
     pause()
 
     # Show Open CV live view
@@ -68,7 +75,7 @@ if len(digits) > 0:
 
     num_frames = 10
     # Save frames to disk
-    print("Saving frames")
+    print(f"Saving {num_frames} frames to disk.")
     for i in range(num_frames):
         # Save single frame from DIGIT
         frame = digit.get_frame()
