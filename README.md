@@ -2,7 +2,7 @@
 
 ## Overview
 
-**DIGIT-Setup** is a minimal Python script for initializing, testing, and streaming data from a single [DIGIT](https://digit.ml/) tactile sensor using the [digit-interface](https://github.com/facebookresearch/digit-interface) library.
+**DIGIT-Setup** is a minimal Python script for initialising, testing, and streaming data from a single [DIGIT](https://digit.ml/) tactile sensor using the [digit-interface](https://github.com/facebookresearch/digit-interface) library.
 
 This tool provides a quick way to:
 
