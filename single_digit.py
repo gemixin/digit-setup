@@ -22,14 +22,14 @@ digits = DigitHandler.list_digits()
 
 # Print name and serial numbers
 for digit in digits:
-    print(f"DIGIT detected at {digit['dev_name']} with serial number {digit['serial']}.")
+    print(f"DIGIT detected at {digit["dev_name"]} with serial number {digit["serial"]}.")
 
 pause()
 
 # If a DIGIT is connected
 if len(digits) > 0:
     # Get the serial number for the DIGIT device
-    serial = digits[0]['serial']
+    serial = digits[0]["serial"]
 
     # Connect to DIGIT
     digit = Digit(serial, "Single_Digit")
@@ -46,8 +46,8 @@ if len(digits) > 0:
     pause()
 
     # Set stream resolution and fps
-    digit.set_resolution({"resolution": {'width': 320, 'height': 240}})  # QVGA resolution
-    digit.set_fps(Digit.STREAMS['QVGA']['fps']['30fps'])  # 30 fps
+    digit.set_resolution({"resolution": {"width": 320, "height": 240}})  # QVGA resolution
+    digit.set_fps(Digit.STREAMS["QVGA"]["fps"]["30fps"])  # 30 fps
     print("Set stream to QVGA 30fps.")
     pause()
 
