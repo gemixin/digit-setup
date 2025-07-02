@@ -14,7 +14,7 @@ This tool provides a quick way to:
 ## Requirements
 
 - **Operating System:** Linux only (DIGIT sensors are supported on Linux only)  
-- **Tested Environment:** Ubuntu 22.04, Python 3.13  
+- **Tested Environment:** Ubuntu 22.04, Python 3.13.5  
 - **Python Environment:** Regular Python or Anaconda environment
 
 ## Installation
