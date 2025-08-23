@@ -1,9 +1,10 @@
-'''
-Author: Gemma McLean
-Date: May 2025
+"""
 Script to showcase basic functionality of a single connected DIGIT sensor.
 Based on https://github.com/facebookresearch/digit-interface
-'''
+
+Author: Gemma McLean
+Date: May 2025
+"""
 
 # Imports
 from digit_interface.digit import Digit
