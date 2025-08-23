@@ -1,5 +1,5 @@
 """
-Script to showcase basic functionality of a single connected DIGIT sensor.
+A script to showcase basic functionality of a single connected DIGIT sensor.
 Based on https://github.com/facebookresearch/digit-interface
 
 Author: Gemma McLean
