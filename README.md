@@ -16,6 +16,7 @@ This tool provides a quick way to:
 - **Operating System:** Linux only (DIGIT sensors are supported on Linux only)  
 - **Tested Environment:** Ubuntu 22.04, Python 3.13.5  
 - **Python Environment:** Regular Python or Anaconda environment
+- **Packages:** [digit-interface](https://github.com/facebookresearch/digit-interface)
 
 ## Installation
 
@@ -34,10 +35,12 @@ cd digit-setup
     ```bash
     python3 -m venv venv
     source venv/bin/activate
+    ```
 
 2. **Install the required package:**  
     ```bash
     pip install digit-interface
+    ```
 
 #### Option B: With Anaconda
 
