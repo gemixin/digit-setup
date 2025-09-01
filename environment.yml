@@ -1,6 +1,6 @@
 name: digit
 dependencies:
-    - python=3.13  # Tested with 3.13.5 but other versions should work
+    - python>=3.10  # Tested with 3.13.5 but other versions should work
     - pip  # Install pip 
-    - pip:  # Include pip dependencies last
+    - pip:
         - digit-interface  # Official DIGIT Python interface
