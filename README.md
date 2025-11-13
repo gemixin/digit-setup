@@ -33,13 +33,13 @@ cd digit-setup
 
 1. **(Optional) Set up a virtual environment:**
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate
+    python3 -m venv .venv
+    source .venv/bin/activate
     ```
 
 2. **Install the required package:**  
     ```bash
-    pip install digit-interface
+    python3 -m pip install digit-interface
     ```
 
 #### Option B: With Anaconda
