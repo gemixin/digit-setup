@@ -14,7 +14,7 @@ This tool provides a quick way to:
 ## Requirements
 
 - **Operating System:** Linux only (DIGIT sensors are supported on Linux only)  
-- **Tested Environment:** Ubuntu 22.04, Python 3.13.5  
+- **Tested Environment:** Ubuntu 24.04, Python 3.12 
 - **Python Environment:** Regular Python or Anaconda environment
 - **Packages:** [digit-interface](https://github.com/facebookresearch/digit-interface)
 
@@ -71,10 +71,24 @@ Follow the terminal output for step-by-step feedback.
 
 ## Known Issues
 
-- **VGA Mode Bug:**  
-  The [digit-interface](https://github.com/facebookresearch/digit-interface) library has a known issue with VGA mode producing glitchy output.  
-  See [issue #10](https://github.com/facebookresearch/digit-interface/issues/10).  
+### VGA Mode Bug 
+  The [digit-interface](https://github.com/facebookresearch/digit-interface) library has a known issue with VGA mode producing glitchy output. See [issue #10](https://github.com/facebookresearch/digit-interface/issues/10).  
+  
   ✅ **Recommendation:** Stick to **QVGA mode** for reliable operation.
+
+### OpenCV V4L2 Backend
+  On Ubuntu, OpenCV may select the **FFmpeg backend** instead of **V4L2** when connecting to a DIGIT sensor. This can cause various issues.
+
+  ✅ **Fix:** Prioritise V4L2 by running:
+
+      export OPENCV_VIDEOIO_PRIORITY_V4L2=9999
+
+  To make this permanent for Bash terminal sessions:
+
+      echo 'export OPENCV_VIDEOIO_PRIORITY_V4L2=9999' >> ~/.bashrc
+      source ~/.bashrc
+
+  **Note:** This setting affects OpenCV backend selection for applications launched from the configured shell, not just DIGIT.
 
 ## Citation
 
