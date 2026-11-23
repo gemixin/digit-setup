@@ -57,7 +57,7 @@ conda activate digit-env
 2. Run the script:
 
 ```bash
-python single_digit.py
+python3 single_digit.py
 ```
 
 The script will:
@@ -72,23 +72,18 @@ Follow the terminal output for step-by-step feedback.
 ## Known Issues
 
 ### VGA Mode Bug 
-  The [digit-interface](https://github.com/facebookresearch/digit-interface) library has a known issue with VGA mode producing glitchy output. See [issue #10](https://github.com/facebookresearch/digit-interface/issues/10).  
-  
-  ✅ **Recommendation:** Stick to **QVGA mode** for reliable operation.
+The [digit-interface](https://github.com/facebookresearch/digit-interface) library has a known issue with VGA mode producing glitchy output. See [issue #10](https://github.com/facebookresearch/digit-interface/issues/10).  
+
+✅ **Recommendation:** Stick to **QVGA mode** for reliable operation.
 
 ### OpenCV V4L2 Backend
-  On Ubuntu, OpenCV may select the **FFmpeg backend** instead of **V4L2** when connecting to a DIGIT sensor. This can cause various issues.
+On Ubuntu, OpenCV may select the **FFmpeg backend** instead of **V4L2** when connecting to a DIGIT sensor. This can cause issues with camera streaming, LED intensity control, and other device operations.
 
-  ✅ **Fix:** Prioritise V4L2 by running:
+✅ **Fix:** Prioritise V4L2 when running the script:
 
-      export OPENCV_VIDEOIO_PRIORITY_V4L2=9999
-
-  To make this permanent for Bash terminal sessions:
-
-      echo 'export OPENCV_VIDEOIO_PRIORITY_V4L2=9999' >> ~/.bashrc
-      source ~/.bashrc
-
-  **Note:** This setting affects OpenCV backend selection for applications launched from the configured shell, not just DIGIT.
+```bash
+OPENCV_VIDEOIO_PRIORITY_V4L2=9999 python3 single_digit.py
+```
 
 ## Citation
 
